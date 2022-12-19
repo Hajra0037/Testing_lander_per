@@ -1,19 +1,19 @@
 import React, { useState } from "react";
-// import { useDisclosure } from "@chakra-ui/react";
-// import FooterModel from "./FooterModal";
+import { useDisclosure } from "@chakra-ui/react";
+import FooterModel from "./FooterModal";
 import Image from "next/image";
 import { useTokens } from "../components/context/TokensContext";
-// import { CustomReactMarkdown } from "./CustomReactMarkdown";
+import { CustomReactMarkdown } from "./CustomReactMarkdown";
 
 const Footer = ({ isUpsell = false }) => {
-  // const { isOpen, onOpen, onClose } = useDisclosure();
+  const { isOpen, onOpen, onClose } = useDisclosure();
   const [type, setType] = useState("");
 
   const tokens = useTokens();
 
   return (
     <>
-      {/* {type === "termsandConditions" ? (
+      {type === "termsandConditions" ? (
         <FooterModel
           title={"Terms and Conditions "}
           isOpen={isOpen}
@@ -44,7 +44,7 @@ const Footer = ({ isUpsell = false }) => {
             {tokens?.privacy_policy || ""}
           </CustomReactMarkdown>
         </FooterModel>
-      )} */}
+      )}
 
       <div className="FooterProduct_V1_footer__4soA5">
         <div className="contentWrap">

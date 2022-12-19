@@ -4,6 +4,7 @@ import "../styles/form.scss";
 import "bootstrap/dist/css/bootstrap.css";
 import { initialize_SF_Konnektive_NextJS_SDK } from "konnektive-sdk-nextjs";
 import { TokensProvider } from "../components/context/TokensContext";
+import { ChakraProvider } from "@chakra-ui/react";
 export default function App({ Component, pageProps }) {
   useEffect(() => {
     initialize_SF_Konnektive_NextJS_SDK({
@@ -20,7 +21,9 @@ export default function App({ Component, pageProps }) {
   }, []);
   return (
     <TokensProvider>
-      <Component {...pageProps} />
+      <ChakraProvider>
+        <Component {...pageProps} />
+      </ChakraProvider>
     </TokensProvider>
   );
 }
