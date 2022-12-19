@@ -1,11 +1,19 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/home.scss";
 import "../styles/form.scss";
 import "bootstrap/dist/css/bootstrap.css";
 import { initialize_SF_Konnektive_NextJS_SDK } from "konnektive-sdk-nextjs";
+import { getDisplayDetails } from "konnektive-sdk-nextjs/dist/api/project";
 import { TokensProvider } from "../components/context/TokensContext";
 
 export default function App({ Component, pageProps }) {
+  const [tokens, setTokens] = useState();
+
+  const getData = async () => {
+    const displayData = await getDisplayDetails();
+    setTokens(displayData?.tokens);
+  };
+
   useEffect(() => {
     initialize_SF_Konnektive_NextJS_SDK({
       projectApiKey: process.env.NEXT_PUBLIC_PROJECT_API_KEY,
@@ -18,9 +26,10 @@ export default function App({ Component, pageProps }) {
       isInitial3dsEnabled: false,
       isRebill3dsEnabled: true,
     });
+    getData();
   }, []);
   return (
-    <TokensProvider>
+    <TokensProvider tokens={tokens}>
       <Component {...pageProps} />
     </TokensProvider>
   );

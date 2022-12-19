@@ -1,19 +1,8 @@
-import React, { useState } from "react";
-import { getDisplayDetails } from "konnektive-sdk-nextjs/dist/api/project";
+import React from "react";
 
 const TokensContext = React.createContext();
 
-export const TokensProvider = ({ children }) => {
-  const [tokens, setTokens] = useState();
-
-  const getData = async () => {
-    const displayData = await getDisplayDetails();
-    setTokens(displayData?.tokens);
-  };
-  React.useEffect(() => {
-    getData();
-  }, []);
-
+export const TokensProvider = ({ children, tokens }) => {
   return (
     <TokensContext.Provider value={tokens}>{children}</TokensContext.Provider>
   );
