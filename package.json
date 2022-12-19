@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "bootstrap": "^5.2.2",
+    "konnektive-sdk-nextjs": "^2.0.57",
     "moment": "^2.29.4",
     "next": "12.3.1",
     "react": "18.2.0",

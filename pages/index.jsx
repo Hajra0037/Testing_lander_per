@@ -4,9 +4,11 @@ import VideoSection from "../components/videoSec";
 import Footer from "../components/Footer";
 import ShippingInfo from "../components/shippingInfo";
 import PaymentInfo from "../components/paymentInfo";
+import { useTokens } from "../components/context/TokensContext";
 
 export default function Home() {
-  let tokens = {};
+  const tokens = useTokens();
+
   return (
     <div className="checkout">
       <Head>

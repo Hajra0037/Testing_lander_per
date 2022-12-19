@@ -2,14 +2,14 @@ import React, { useState } from "react";
 // import { useDisclosure } from "@chakra-ui/react";
 // import FooterModel from "./FooterModal";
 import Image from "next/image";
-// import { useTokens } from "../context/TokensContext";
+import { useTokens } from "../components/context/TokensContext";
 // import { CustomReactMarkdown } from "./CustomReactMarkdown";
 
 const Footer = ({ isUpsell = false }) => {
   // const { isOpen, onOpen, onClose } = useDisclosure();
   const [type, setType] = useState("");
 
-  const tokens = {};
+  const tokens = useTokens();
 
   return (
     <>
