@@ -7,7 +7,6 @@ export default function Document() {
         <meta name="robots" content="noindex, nofollow" />
         <link rel="icon" type="image/png" href="/favicon.ico" />
       </Head>
-
       <body>
         <Main />
         <NextScript />

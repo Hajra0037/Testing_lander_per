@@ -64,53 +64,6 @@ export default function Home() {
           href="/blog/dea4994d6f04d9490ec7.css"
           data-n-g=""
         />
-        <noscript data-n-css=""></noscript>
-        <link
-          rel="preload"
-          href="/blog/main-f094e29a130fd0913879.js"
-          as="script"
-        />
-        <link
-          rel="preload"
-          href="/blog/webpack-95c2b224bccf352ee870.js"
-          as="script"
-        />
-        <link
-          rel="preload"
-          href="/blog/framework.daa7383ad2ab2e6757c1.js"
-          as="script"
-        />
-        <link
-          rel="preload"
-          href="/blog/commons.286c5ad94e4334e87283.js"
-          as="script"
-        />
-        <link
-          rel="preload"
-          href="/blog/_app-78e534ec3687abd1183c.js"
-          as="script"
-        />
-        <link
-          rel="preload"
-          href="/blog/2c3b9bffc7150b37a7b3810dfcf1c0b0fac2bd18.9fa5f7207f37e655ee89.js"
-          as="script"
-        />
-        <link
-          rel="preload"
-          href="/blog/index-b841417c9d9770d1812d.js"
-          as="script"
-        />
-
-        <link
-          as="script"
-          rel="prefetch"
-          href="/blog/2c3b9bffc7150b37a7b3810dfcf1c0b0fac2bd18.9fa5f7207f37e655ee89.js"
-        />
-        <link
-          as="script"
-          rel="prefetch"
-          href="/blog/[slug]-6e6ea4ffa84736067f0b.js"
-        />
       </Head>
       <div>
         <div id="__next">
@@ -118,7 +71,7 @@ export default function Home() {
             <div class="border-b bg-accent-1 border-accent-2">
               <div class="container mx-auto px-5">
                 <div class="py-2 text-center text-sm">
-                  The source code for this blog is
+                  The source code for this blog is &nbsp;
                   <a
                     href="https://github.com/vercel/next.js/tree/canary/examples/blog-starter"
                     class="underline hover:text-success duration-200 transition-colors"
