@@ -9,15 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@chakra-ui/react": "^2.4.4",
-    "@emotion/react": "^11.10.5",
-    "@emotion/styled": "^11.10.5",
-    "bootstrap": "^5.2.2",
+    "bootstrap": "^5.2.3",
     "framer-motion": "^7.10.2",
     "konnektive-sdk-nextjs": "^2.0.57",
     "moment": "^2.29.4",
     "next": "12.3.1",
     "react": "18.2.0",
+    "react-bootstrap": "^2.7.0",
     "react-dom": "18.2.0",
     "react-markdown": "^8.0.4",
     "rehype-raw": "^6.1.1",

@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import { useDisclosure } from "@chakra-ui/react";
+
 import FooterModel from "./FooterModal";
 import Image from "next/image";
 import { useTokens } from "../components/context/TokensContext";
 import { CustomReactMarkdown } from "./CustomReactMarkdown";
 
 const Footer = ({ isUpsell = false }) => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
   const [type, setType] = useState("");
+  const [isOpen, setOpen] = useState(false);
 
   const tokens = useTokens();
 
@@ -17,8 +17,12 @@ const Footer = ({ isUpsell = false }) => {
         <FooterModel
           title={"Terms and Conditions "}
           isOpen={isOpen}
-          onOpen={onOpen}
-          onClose={onClose}
+          onOpen={() => {
+            setOpen(!isOpen);
+          }}
+          onClose={() => {
+            setOpen(!isOpen);
+          }}
         >
           <CustomReactMarkdown>
             {tokens?.terms_and_conditions || ""}
@@ -28,8 +32,12 @@ const Footer = ({ isUpsell = false }) => {
         <FooterModel
           title={"Contact"}
           isOpen={isOpen}
-          onOpen={onOpen}
-          onClose={onClose}
+          onOpen={() => {
+            setOpen(!isOpen);
+          }}
+          onClose={() => {
+            setOpen(!isOpen);
+          }}
         >
           <CustomReactMarkdown>{tokens?.contact_us || ""}</CustomReactMarkdown>
         </FooterModel>
@@ -37,8 +45,12 @@ const Footer = ({ isUpsell = false }) => {
         <FooterModel
           title={"Privacy policy"}
           isOpen={isOpen}
-          onOpen={onOpen}
-          onClose={onClose}
+          onOpen={() => {
+            setOpen(!isOpen);
+          }}
+          onClose={() => {
+            setOpen(!isOpen);
+          }}
         >
           <CustomReactMarkdown>
             {tokens?.privacy_policy || ""}
@@ -61,7 +73,7 @@ const Footer = ({ isUpsell = false }) => {
                 onClick={(e) => {
                   e.preventDefault();
                   setType("termsandConditions");
-                  onOpen();
+                  setOpen(!isOpen);
                 }}
               >
                 Terms &amp; Conditions{" "}
@@ -76,7 +88,7 @@ const Footer = ({ isUpsell = false }) => {
                 onClick={(e) => {
                   e.preventDefault();
                   setType("privacyPolicy");
-                  onOpen();
+                  setOpen(!isOpen);
                 }}
               >
                 Privacy Policy
@@ -91,7 +103,7 @@ const Footer = ({ isUpsell = false }) => {
                 onClick={(e) => {
                   e.preventDefault();
                   setType("contactUs");
-                  onOpen();
+                  setOpen(!isOpen);
                 }}
               >
                 Contact Us

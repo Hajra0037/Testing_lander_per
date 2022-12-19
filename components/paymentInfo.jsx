@@ -11,7 +11,7 @@ const PaymentInfo = () => {
   // const tokens = useTokens();
   const tokens = {};
   let date = new Date();
-  // const { isOpen, onOpen, onClose } = useDisclosure();
+
   const [type, setType] = useState("");
   return (
     <div
@@ -173,7 +173,7 @@ const PaymentInfo = () => {
                       // {...register("cardMonth")}
                       required={true}
                     >
-                      <option value="" disabled="" selected="">
+                      <option value="" disabled="">
                         Month
                       </option>
                       <option value="01">(01) January</option>
@@ -197,7 +197,7 @@ const PaymentInfo = () => {
                       required={true}
                       // {...register("cardYear")}
                     >
-                      <option value="" disabled="" selected="">
+                      <option value="" disabled="">
                         Year
                       </option>
                       <option value="22">2022</option>
