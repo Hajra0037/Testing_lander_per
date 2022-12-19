@@ -6,7 +6,6 @@ const FooterModel = (props) => {
         <div
           class={isOpen ? "modal fade show" : "modal fade"}
           id="exampleModal"
-          tabindex="-1"
           aria-labelledby="exampleModalLabel"
           aria-hidden="true"
           style={{

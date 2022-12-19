@@ -325,7 +325,6 @@ const PaymentInfo = () => {
                   }}
                   id="submit-checkout"
                   value="complete checkout"
-                  tabIndex="23"
                 >
                   ORDER NOW
                 </button>

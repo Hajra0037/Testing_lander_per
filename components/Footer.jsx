@@ -8,7 +8,7 @@ const Footer = ({ isUpsell = false }) => {
   const [isOpen, setOpen] = useState(false);
 
   const tokens = useTokens();
-
+  console.log("tokens", tokens);
   return (
     <>
       {type === "termsandConditions" ? (
