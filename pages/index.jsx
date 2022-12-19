@@ -2,8 +2,11 @@ import Head from "next/head";
 import Image from "next/image";
 import VideoSection from "../components/videoSec";
 import Footer from "../components/Footer";
+import ShippingInfo from "../components/shippingInfo";
+import PaymentInfo from "../components/paymentInfo";
 
 export default function Home() {
+  let tokens = {};
   return (
     <div className="checkout">
       <Head>
@@ -60,10 +63,11 @@ export default function Home() {
         />
         <title>Next.js Blog Example with Markdown</title>
         <meta name="next-head-count" content="15" />
-        <link rel="preload" href="/blog/dea4994d6f04d9490ec7.css" as="style" />
+        <link rel="preload" href="/blog/a8ee53d486b64ebf.css" as="style" />
+        <link rel="stylesheet" href="/blog/a8ee53d486b64ebf.css" data-n-g="" />
         <link
           rel="stylesheet"
-          href="/blog/dea4994d6f04d9490ec7.css"
+          href="/lander1healthbeat_files/a8ee53d486b64ebf.css"
           data-n-g=""
         />
       </Head>
@@ -180,9 +184,9 @@ export default function Home() {
                               display: "flex",
                             }}
                             dangerouslySetInnerHTML={{
-                              __html: `${tokens?.companyName || ""} &nbsp; $ ${
-                                tokens?.step1BasePrice || ""
-                              } `,
+                              __html: `${
+                                tokens?.companyName || "AimFit Smart Watch "
+                              } &nbsp; $ ${tokens?.step1BasePrice || "79.99"} `,
                             }}
                           ></span>
                         </div>
@@ -195,10 +199,7 @@ export default function Home() {
                             display: "flex",
                           }}
                         >
-                          $
-                          <CustomReactMarkdown>
-                            {tokens?.step1Shipping || ""}
-                          </CustomReactMarkdown>
+                          $5
                         </div>
                       </div>
                       <div
@@ -214,10 +215,7 @@ export default function Home() {
                             display: "flex",
                           }}
                         >
-                          -$
-                          <CustomReactMarkdown>
-                            {tokens?.masterCardPromo || ""}
-                          </CustomReactMarkdown>
+                          -$3
                         </div>
                       </div>
 
@@ -228,10 +226,7 @@ export default function Home() {
                             display: "flex",
                           }}
                         >
-                          $
-                          <CustomReactMarkdown>
-                            {tokens?.step1Total || ""}
-                          </CustomReactMarkdown>
+                          $10
                         </div>
                       </div>
 
@@ -252,7 +247,7 @@ export default function Home() {
                   <div className="Form_V9_formSection__rjTZI">
                     <div className="Form_V9_checkoutContainer__hZx_o false">
                       <div className="Form_V9_formCard__0h4bh Form_V9_formCardShippingInformation__h_AXb">
-                        {errors?.phone && (
+                        {/* {errors?.phone && (
                           <div
                             style={{
                               display: "flex",
@@ -269,13 +264,13 @@ export default function Home() {
                               Error Msg: {errors?.phone?.message}
                             </p>
                           </div>
-                        )}
-                        {/* <ShippingInfo
-                          isBillingAddressSame={isBillingAddressSame}
-                          register={register}
-                          setValue={setValue}
-                          setIsBillingAddressSame={setIsBillingAddressSame}
-                        /> */}
+                        )} */}
+                        <ShippingInfo
+                        // isBillingAddressSame={isBillingAddressSame}
+                        // register={register}
+                        // setValue={setValue}
+                        // setIsBillingAddressSame={setIsBillingAddressSame}
+                        />
                       </div>
                       <div
                         className="Form_V9_formCard__0h4bh undefined false"
@@ -285,14 +280,14 @@ export default function Home() {
                           gridRow: 1 / 4,
                         }}
                       >
-                        {/* <PaymentInfo
-                          isBillingAddressSame={isBillingAddressSame}
-                          register={register}
-                          setValue={setValue}
-                          setIsE_Shipping={setIsE_Shipping}
-                          isE_Shipping={isE_Shipping}
-                          submitHandler={() => handleSubmit(onSubmit)}
-                        /> */}
+                        <PaymentInfo
+                        // isBillingAddressSame={isBillingAddressSame}
+                        // register={register}
+                        // setValue={setValue}
+                        // setIsE_Shipping={setIsE_Shipping}
+                        // isE_Shipping={isE_Shipping}
+                        // submitHandler={() => handleSubmit(onSubmit)}
+                        />
                       </div>
                     </div>
                   </div>

@@ -192,4 +192,200 @@
 
     color: #777;
   }
+  //  form css
+  .Form_V9_container__ZjdbQ {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  @media (min-width: 750px) {
+    .Form_V9_container__ZjdbQ {
+      width: 80%;
+      justify-content: center;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: row;
+      -moz-column-gap: 30px;
+      column-gap: 30px;
+    }
+  }
+  @media (min-width: 751px) and (max-width: 925px) {
+    .Form_V9_container__ZjdbQ {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  @media (min-width: 750px) {
+    .Form_V9_formSection__rjTZI {
+      flex-direction: row;
+    }
+    .Form_V9_gridLayout__sAvxF {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      grid-gap: 30px;
+      gap: 30px;
+    }
+    .Form_V9_tableDetails__UkeCx {
+      width: 100%;
+    }
+    .Form_V9_formCard__0h4bh {
+      flex-direction: column;
+    }
+    .Form_V9_formCardShippingInformation__h_AXb {
+      margin-top: 20px;
+    }
+    .Form_V9_formCardShippingInformation__h_AXb {
+      border-right: 1px solid #ccc;
+      border-left: 1px solid #ccc;
+      padding: 0 25px;
+    }
+    .Form_V9_checkoutContainer__hZx_o {
+      flex-direction: row;
+      align-items: flex-start;
+      -moz-column-gap: 25px;
+      column-gap: 25px;
+    }
+    .Form_V9_form__cQ3T3 {
+      width: 100%;
+      padding: 10px 0;
+    }
+  }
+  @media (min-width: 751px) and (max-width: 950px) {
+    .Form_V9_checkoutContainer__hZx_o {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .Form_V9_formSection__rjTZI {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+    }
+    .Form_V9_billingInfo__T82VT {
+      width: 100%;
+    }
+  }
+  .TableDetail_V2_tableItemHeader_top__d_SLQ {
+    color: #161e2b;
+  }
+  .TableDetail_V2_tableItemHeader__uvqGL,
+  .TableDetail_V2_tableItemHeader_top__d_SLQ {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    font-size: 15px;
+    line-height: 15px;
+    border-bottom: 1px solid #ccc;
+  }
+  .TableDetail_V2_tableProductDetail__2Ao8A {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18px;
+    padding: 8px 0;
+  }
+  .TableDetail_V2_sectionHeader__nNbnS {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 22px;
+    padding: 8px 0;
+  }
+  @media (min-width: 768px) {
+    .TableDetail_V2_sectionHeader__nNbnS {
+      height: 44px;
+    }
+    .TableDetail_V2_tableItemHeader__uvqGL {
+      font-size: 16px;
+    }
+    .TableDetail_V2_productImageDesktop__629yu {
+      display: block !important;
+    }
+    .TableDetail_V2_productImageMobile__J62Cd {
+      display: none;
+    }
+    .TableDetail_V2_productCard__aEJd3 {
+      margin-top: 25px;
+      width: 100%;
+    }
+  }
+  .Form_V9_checkoutContainer__hZx_o {
+    width: 100%;
+    align-items: center;
+  }
+  .Form_V9_checkoutContainer__hZx_o,
+  .Form_V9_formSection__rjTZI,
+  .Form_V9_form__cQ3T3 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.form-group select {
+  font-weight: 400;
+  color: #000000;
+}
+
+.UpsellTwo_V1_frmBoxHd2__zVTdq {
+  background: #2984ff;
+  font-size: 17px;
+  line-height: 30px;
+  text-align: left;
+  color: #fff;
+  padding: 6px 40px 6px 50px;
+  border: 0;
+  margin: 10px 0 0;
+  border-radius: 4px;
+  position: relative;
+}
+
+.UpsellTwo_V1_bestSela__wONUh {
+  background: url(/red-arw.png) -2px top no-repeat;
+  background-size: min-content 100%;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: left;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 2px 0 0 12px;
+  margin: 10px 0 -13px;
+  position: relative;
+  z-index: 1;
+}
+
+.Checkout_V3_submitButton_v2__zuFJL {
+  font-size: 20px;
+  line-height: 25px;
+  align-items: center;
+  font-weight: 400;
+  padding: 20px 0;
+  width: 100%;
+  height: auto;
+  border: 2px solid #45af1a;
+  background: linear-gradient(180deg, #60ba0f 0, #4a8c0d);
+  background-repeat: repeat;
+  background-position: 0 0;
+  background-attachment: scroll;
+  background-size: 100%;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  border-radius: 8px 8px 8px 8px;
+  box-shadow: 0 0 0 0 #000;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  /* transition: all 0.25s ease; */
+}
+
+.DeliveredBy_V3_container__wMQ5s {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #eef2f3;
+  padding: 10px;
+  gap: 15px;
 }
