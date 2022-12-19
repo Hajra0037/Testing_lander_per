@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-
 import FooterModel from "./FooterModal";
-import Image from "next/image";
+
 import { useTokens } from "../components/context/TokensContext";
-import { CustomReactMarkdown } from "./CustomReactMarkdown";
 
 const Footer = ({ isUpsell = false }) => {
   const [type, setType] = useState("");
@@ -24,9 +22,11 @@ const Footer = ({ isUpsell = false }) => {
             setOpen(!isOpen);
           }}
         >
-          <CustomReactMarkdown>
-            {tokens?.terms_and_conditions || ""}
-          </CustomReactMarkdown>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: tokens?.terms_and_conditions || "terms and cond",
+            }}
+          ></div>
         </FooterModel>
       ) : type === "contactUs" ? (
         <FooterModel
@@ -39,7 +39,11 @@ const Footer = ({ isUpsell = false }) => {
             setOpen(!isOpen);
           }}
         >
-          <CustomReactMarkdown>{tokens?.contact_us || ""}</CustomReactMarkdown>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: tokens?.contact_us || " contact us",
+            }}
+          ></div>
         </FooterModel>
       ) : (
         <FooterModel
@@ -52,9 +56,11 @@ const Footer = ({ isUpsell = false }) => {
             setOpen(!isOpen);
           }}
         >
-          <CustomReactMarkdown>
-            {tokens?.privacy_policy || ""}
-          </CustomReactMarkdown>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: tokens?.privacy_policy || "privacy policy",
+            }}
+          ></div>
         </FooterModel>
       )}
 

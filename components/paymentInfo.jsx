@@ -37,7 +37,7 @@ const PaymentInfo = () => {
           onOpen={onOpen}
           onClose={onClose}
         >
-          <CustomReactMarkdown>{tokens?.cvv || ""}</CustomReactMarkdown>
+          <CustomReactMarkdown>{tokens?.cvv || "cvv"}</CustomReactMarkdown>
           <br />
 
           <Image
@@ -195,7 +195,6 @@ const PaymentInfo = () => {
                       data-error-message="Please select a valid expiry year!"
                       data-threeds="year"
                       required={true}
-                      // {...register("cardYear")}
                     >
                       <option value="" disabled="">
                         Year
